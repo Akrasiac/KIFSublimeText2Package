@@ -1,0 +1,40 @@
+{ "name": "KIF",
+  "scopeName": "text.kif",
+  "fileTypes": ["kif"],
+  "patterns": [
+    { "match": "[0-9]",
+      "name": "constant.numeric",
+      "comment": "Numbers"
+    },
+    { "match": "or |and |not |exists |forall |=>|<=>",
+      "name": "keyword.operator",
+      "comment": "Operators"
+    },
+    { "match": ";.*$",
+      "name": "comment.line.semi-colon",
+      "comment": "Line comments"
+    },
+    { "match": "[a-z][-A-Za-z0-9_]+ ",
+      "name": "storage.type",
+      "comment": "Relations"
+    },
+    { "match": "[A-Z][-A-Za-z0-9_]+",
+      "name": "variable.language",
+      "comment": "Entities"
+    },
+    { "match": "\\?[-A-Za-z0-9_]+",
+      "name": "variable.parameter",
+      "comment": "Variables"
+    },
+    { "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.kif",
+      "comment": "Strings"
+    },
+    { "match": "&%[-A-Za-z0-9_]+",
+      "name": "string.interpolated",
+      "comment": "SUMO Links"
+    }
+  ],
+  "uuid": "6c3f64c6-cc75-4a1f-960f-13ee223dc530"
+}
